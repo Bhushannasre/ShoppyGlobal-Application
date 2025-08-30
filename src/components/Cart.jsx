@@ -10,11 +10,11 @@ export default function Cart() {
 
   return (
     <div className="container" style={{display:'grid', gap:'1rem'}}>
-      <h1>Cart</h1>
+      <h1 className='cart-heading'>Cart</h1>
       {!items.length && (
         <div className="empty">
-          <p>Your cart is empty.</p>
-          <p><Link className="btn" to="/">Browse products</Link></p>
+          <p className='mb-3'>Your cart is empty.</p>
+          <h4><Link className="btn" to="/" >Browse products</Link></h4>
         </div>
       )}
       {items.map((item) => (

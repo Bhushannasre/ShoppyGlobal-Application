@@ -15,11 +15,25 @@ export default function ProductItem({ product }){
           <h3 id={'p-'+id} style={{margin:0,fontSize:'1rem'}}>{title}</h3>
           <div className="price">${price}</div>
         </div>
-        <div className="muted" style={{fontSize:'.9rem'}}>{brand}</div>
-        <div className="card-actions" style={{marginTop:'.5rem'}}>
-          <Link className="btn" to={`/products/${id}`}>Details</Link>
-          <button className="btn btn-primary" onClick={() => dispatch(addToCart(product))}>Add to Cart</button>
-        </div>
+        <div className="text-gray-500 text-sm">{brand}</div>
+
+<div className="flex gap-1 mt-3 sm:mt-4 md:ml-2" style={{justifyContent:'space-between'}}>
+  {/* Details Button */}
+  <Link
+    to={`/products/${id}`}
+    className="w-28 h-10 flex justify-center items-center rounded-md bg-blue-600 text-white font-medium hover:bg-blue-700 transition"
+  >
+    Details
+  </Link>
+
+  {/* Add to Cart Button */}
+  <button
+    onClick={() => dispatch(addToCart(product))}
+    className="w-28 h-10 rounded-md bg-green-600 text-white font-medium hover:bg-green-700 transition "
+  >
+    Add to Cart
+  </button>
+</div>
       </div>
     </article>
   );

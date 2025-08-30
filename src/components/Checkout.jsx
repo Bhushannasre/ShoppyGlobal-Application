@@ -33,7 +33,7 @@ export default function Checkout() {
   }
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white rounded shadow">
+    <div className="max-w-lg mx-auto p-6 bg-gray-800 rounded shadow mt-4">
       <h1 className="text-2xl font-bold mb-4">Checkout</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
@@ -66,14 +66,14 @@ export default function Checkout() {
           name="payment"
           value={form.payment}
           onChange={handleChange}
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded  text-white"
         >
-          <option value="card">Credit/Debit Card</option>
-          <option value="cod">Cash on Delivery</option>
+          <option value="card" className="bg-gray-800 text-white">Credit/Debit Card</option>
+          <option value="cod" className="bg-gray-800 text-white">Cash on Delivery</option>
         </select>
         <button
           type="submit"
-          className="w-full bg-black text-white p-2 rounded hover:bg-gray-800"
+          className="w-full bg-black text-white p-2 rounded hover:bg-black-800 transition font-medium cursor-pointer"
         >
           Place Order
         </button>

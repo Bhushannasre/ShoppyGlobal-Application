@@ -42,8 +42,8 @@ export default function ProductDetail(){
         <div className="price" style={{fontSize:'1.25rem'}}>${data.price}</div>
         <p>{data.description}</p>
         <div style={{display:'flex', gap:'.5rem'}}>
-          <button className="btn btn-primary" onClick={() => dispatch(addToCart(data))}>Add to Cart</button>
-          <Link className="btn" to="/cart">Go to Cart</Link>
+          <button className="btn btn-primary" onClick={() => dispatch(addToCart(data))} style={{width:'150px', height:'40px'}}>Add to Cart</button>
+          <Link className="btn btn-danger" to="/cart" style={{width:'130px', height:'40px',background:'blue'}}>Go to Cart</Link>
         </div>
         <div className="muted">Rating: {data.rating} · Stock: {data.stock}</div>
       </div>

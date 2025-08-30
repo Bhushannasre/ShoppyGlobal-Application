@@ -44,7 +44,7 @@ Copy code
 
 Clone the repository:
 ```bash
-git clone https://github.com/your-username/shoopygloble.git
+git clone https://github.com/Bhushannasre/ShoppyGlobal-Application.git
 cd shoopygloble
 Install dependencies:
 
